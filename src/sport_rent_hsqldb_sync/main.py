@@ -1,4 +1,5 @@
 import argparse
+import sys
 from pathlib import Path
 
 from sport_rent_hsqldb_sync.api import send_sync_payload
@@ -30,9 +31,14 @@ def run_sync_once(database_path: Path, backend_url: str) -> None:
 
     send_sync_payload(backend_url, payload)
 
-    print(f"Sent {len(reservations)} reservations")
+    if sys.stdout is not None:
+        print(f"Sent {len(reservations)} reservations")
 
 
 def main() -> None:
     arguments = parse_arguments()
     run_sync_once(arguments.database_path, arguments.backend_url)
+
+
+if __name__ == "__main__":
+    main()
