@@ -1,0 +1,24 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+.env
+.env.*
+!.env.example
+
+# Local HSQLDB runtime and downloaded development tools
+hsqldb-data/
+lib/
+
+# Local synchronizer state and temporary snapshots
+.local/
+sync-state/
+*.sqlite3
+

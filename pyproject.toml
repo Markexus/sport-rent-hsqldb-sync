@@ -1,0 +1,23 @@
+[project]
+name = "sport-rent-hsqldb-sync"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Markexus", email = "matix88813@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+sport-rent-hsqldb-sync = "sport_rent_hsqldb_sync.main:main"
+
+[build-system]
+requires = ["uv_build>=0.9.5,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.4",
+]
